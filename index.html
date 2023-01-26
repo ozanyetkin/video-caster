@@ -9,11 +9,19 @@
         // console.log("Hello world!");
 
         var videos = Array("https://www.youtube.com/embed/89eB58v9pGY", "https://www.youtube.com/embed/X5DgU4SX3vE", "https://www.youtube.com/embed/02DTLBki51M")
-        var item = videos[Math.floor(Math.random() * videos.length)];
+        // var item = videos[Math.floor(Math.random() * videos.length)];
 
         // console.log(item);
+        function myTimer() {
+            var today = new Date();
+            var seconds = today.getSeconds();
 
-        document.getElementById("myframe").src = item + "?autoplay=1&mute=1&controls=0";
+            // console.log(seconds);
+
+            document.getElementById("myframe").src = videos[Math.floor((seconds / 10)) % videos.length] + "?autoplay=1&mute=1&controls=0";
+        }
+
+        setInterval(myTimer, 10000);
 
     </script>
 
