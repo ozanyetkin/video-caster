@@ -1,0 +1,22 @@
+<html>
+
+<body>
+
+    <iframe id="myframe" width="420" height="315"
+        src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1&controls=0">
+    </iframe>
+    <script>
+        // console.log("Hello world!");
+
+        var videos = Array("https://www.youtube.com/embed/89eB58v9pGY", "https://www.youtube.com/embed/X5DgU4SX3vE", "https://www.youtube.com/embed/02DTLBki51M")
+        var item = videos[Math.floor(Math.random() * videos.length)];
+
+        // console.log(item);
+
+        document.getElementById("myframe").src = item + "?autoplay=1&mute=1&controls=0";
+
+    </script>
+
+</body>
+
+</html>
